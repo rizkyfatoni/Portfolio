@@ -151,7 +151,7 @@ i {
     height: 602px;
     width: 513px;
     border-radius: 500px 500px 25px 25px;
-    background-image: url('Assets/cover1.webp');
+    background-image: url('img/imagecover.png');
     box-shadow: 0px 8px 50px rgba(29, 29, 37, 0.1);
     
     animation: mymove 45s;
@@ -160,7 +160,7 @@ i {
     animation-timing-function: ease-in-out;
     -webkit-animation-timing-function: ease-in-out;
 }
-@keyframes mymove {
+//@keyframes mymove {
     0% { background-image: url('Assets/cover1.webp'); }
     30% { background-image: url('Assets/cover1.webp'); }
     33% { background-image: url('Assets/cover2.webp'); }
@@ -231,13 +231,13 @@ i {
     overflow: hidden;
 }
 .card:nth-child(1){
-    background-image: url('Assets/img1.webp');
+    background-image: url('img/image3.png');
 }
 .card:nth-child(2){
-    background-image: url('Assets/img2.webp');
+    background-image: url('img/image2.png');
 }
 .card:nth-child(3){
-    background-image: url('Assets/img3.webp');
+    background-image: url('img/image1.png');
 }
 .cardContent {
     margin-top: 418px;
@@ -313,7 +313,7 @@ i {
 .ca {
     left: 160px;
 }
-.uixChild {
+.gfxChild {
     height: auto;
     padding-top: 64px;
     display: flex;
@@ -338,8 +338,13 @@ i {
 .item img {
     width: 100%;
     height: 100%;
+    object-fit: contain;
     border-radius: 15px;
+    display: block;
+    background-color:rgb(255, 255, 255); /* bisa bantu tampilannya kalau ada ruang kosong */
 }
+
+
 form {
     width: 318px;
     height: 431px;
@@ -497,7 +502,7 @@ label p{
     .artRight {
         margin: 80px 0 0 0;
     }
-    .uixChild {
+    .gfxChild {
         flex-direction: column;
     }
     .secondItem {
