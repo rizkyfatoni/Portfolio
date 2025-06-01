@@ -3,18 +3,17 @@ name: Deploy to Vercel
 on:
   push:
     branches:
-      - main  # Atau ganti dengan branch yang ingin kamu deploy
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
+      - name: Checkout repo
         uses: actions/checkout@v3
 
       - name: Install Vercel CLI
-        run: npm install --global vercel
+        run: npm install -g vercel
 
       - name: Deploy to Vercel
         env:
@@ -23,5 +22,4 @@ jobs:
           VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
         run: |
           vercel pull --yes --environment=production --token=$VERCEL_TOKEN
-          vercel build --token=$VERCEL_TOKEN
-          vercel deploy --prebuilt --prod --token=$VERCEL_TOKEN
+          vercel deploy --prod --token=$VERCEL_TOKEN
