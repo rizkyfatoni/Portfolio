@@ -1,9 +1,3 @@
 {
-  "version": 2,
-  "name": "portfolio",
-  "public": true,
-  "rewrites": [],
-  "routes": [],
-  "cleanUrls": true,
-  "trailingSlash": false
+  "version": 2
 }
